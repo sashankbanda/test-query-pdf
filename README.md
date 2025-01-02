@@ -1,6 +1,6 @@
-# PDF ChatBot Setup Guide
+# QueryPDF Setup Guide
 
-Follow these steps to set up and run the PDF ChatBot.
+Follow these steps to set up and run the QueryPDF.
 
 ## Prerequisites
 
