@@ -1,0 +1,132 @@
+/* Styling for the Chatbot component */
+.Chatbot {
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    color: #ffffff;
+    height: 100vh;
+  }
+  
+  .navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+  
+  .navbar .profile-symbol {
+    font-size: 1.2rem;
+  }
+  
+  .main-content {
+    color: #000;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+  }
+  
+  .pdf-viewer {
+    flex: 1;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    padding-top: 0px;
+    overflow-y: auto;
+  }
+
+  .pdf-title {
+    padding: 0 15px;
+  }
+
+  .pdf-viewer-header input{
+    width: 40px;
+  }
+  
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    padding: 10px;
+    overflow-y: auto;
+  }
+
+  .pdf-viewer-header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 10px;
+    padding-top: 0px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;   
+  }
+  
+  .chat-message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  
+  .user-message {
+    background-color: #d1e7dd;
+    align-self: flex-end;
+    margin-left: auto;
+    text-align: left;
+  }
+  
+  .bot-message {
+    background-color: #f8d7da;
+    align-self: flex-start;
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .context p {
+    margin: 5px 0;
+  }
+  
+  .input-container {
+    display: flex;
+    padding: 10px;
+    background-color: #1c1c1c;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #575454;
+    color: white;
+  }
+  
+  .input-container button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .input-container button:hover {
+    background-color: #b71c1c;
+  }
+  
