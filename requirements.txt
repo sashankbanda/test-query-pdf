@@ -11,4 +11,3 @@ pyMuPDF
 flask
 flask_cors
 pdf2image
-werkzeug
