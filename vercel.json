@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      },
+      {
+        "src": "pdf-upload/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "pdf-upload/build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "app.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/pdf-upload/$1"
+      }
+    ]
+  }
+  
