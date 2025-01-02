@@ -136,5 +136,8 @@ def get_pdf(pdf_name):
 def get_pdf_names():
     return jsonify({"pdfNames": app.config['PDF_FILENAMES']}), 200
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+# Remove the local app.run() as Vercel handles this automatically
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000, debug=True)
+
+# Vercel expects to treat each Python function as a serverless function, no app.run() required

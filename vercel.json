@@ -1,13 +1,27 @@
 {
     "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      }
+    ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "app.py"
+        "src": "/upload",
+        "dest": "/app.py"
       },
       {
-        "src": "/(.*)",
-        "dest": "/pdf-upload/$1"
+        "src": "/ask",
+        "dest": "/app.py"
+      },
+      {
+        "src": "/get-pdf/(.*)",
+        "dest": "/app.py"
+      },
+      {
+        "src": "/get-pdf-names",
+        "dest": "/app.py"
       }
     ]
   }
