@@ -15,6 +15,16 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Retrieve API keys from environment variables
+groq_api_key = os.getenv("GROQ_API_KEY")
+google_api_key = os.getenv("GOOGLE_API_KEY")
+
+if not groq_api_key or not google_api_key:
+    raise ValueError("API keys are not set. Please check your .env file.")
+
 app = Flask(__name__)
 CORS(app)
 
@@ -26,14 +36,7 @@ app.config['PDF_FILENAMES'] = []
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
 
-# API Keys
-groq_api_key = "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"
-google_api_key = "AIzaSyCdnDz2fwfTyZ2uFaxyFj4AJpDWLB7i7M4"
-
-os.environ['GROQ_API_KEY'] = groq_api_key
-os.environ['GOOGLE_API_KEY'] = google_api_key
-
-# Update the model name to gemma2-9b-it
+# Initialize the model
 llm = ChatGroq(groq_api_key=groq_api_key, model_name="gemma2-9b-it")
 
 prompt = ChatPromptTemplate.from_template(
